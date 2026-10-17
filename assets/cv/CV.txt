@@ -1,0 +1,37 @@
+﻿Joney Sunga
++63 969 098 3944 | sunga.joneyy@gmail.com |  LinkedIn |  GitHub
+EDUCATION 
+Angeles University Foundation  | Angeles, Pampanga                      2023 - Present          
+Bachelor of Computer Science                                                                                                      
+* Relevant Courses: Machine Learning, Data Visualization, Data Structures & Algorithms, Database Systems, Software Engineering, Web Development, Mobile Development, Programming Fundamentals
+* Honors: College Scholar (5 Semesters), University Scholar
+
+
+TECHNICAL SKILLS
+Languages: Python, Java, JavaScript, C#, R
+Machine Learning & Data: PyTorch, TensorFlow, scikit-learn, OpenCV, Data Analysis & Visualization
+Developer Tools: Git / GitHub, VS Code
+Hardware & Systems: PC assembly, OS installation, Troubleshooting, LAN setup, Linux, Local LLM hosting
+
+
+WORK & PROJECT EXPERIENCE
+Palai | Angeles University Foundation        2026 - Present
+Machine Learning Lead (Leaf Isolation) | Thesis Project
+* Spearheaded the development and training of the leaf isolation model, serving as the first stage of a two-stage SegFormer-B1 semantic segmentation pipeline for a web-based rice disease diagnostic system. 
+* Curated and trained on a dataset of 1,900 image-mask pairs, achieving 95.58% Leaf IoU and 97.05% mIoU on held-out test sets. 
+* Collaborated directly with PhilRice and DOST for model evaluation and app validation. 
+Ablecare                Aug. 2025 - May 2026
+Social Media Manager
+* Managed end-to-end social media strategy, utilizing analytics tools to track user engagement metrics and optimize content performance. 
+* Designed digital assets and scheduled content across platforms, improving brand visibility and audience interaction. 
+Cynet Virtual Advantage        2021 - 2024 
+IT Support & Hardware Assistant
+* Provided technical support for a call center, assembling, configuring, and deploying desktop computers. 
+* Installed operating systems and resolved hardware issues. 
+* Collaborated with the IT team to set up and maintain LAN connections for call center workstations, ensuring stable operations and minimizing downtime. 
+
+
+CERTIFICATIONS
+* CCNAv7: Introduction to Networks - Cisco 2025 | Credential
+* Introduction to Cybersecurity - Cisco 2025 | Credential
+* Discovering Entrepreneurship - Cisco 2024 | Credential

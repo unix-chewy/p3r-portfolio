@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JONEY SUNGA · PORTFOLIO</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-screen="home">
+
+<!-- Background video layers -->
+<div id="bg" aria-hidden="true">
+  <div class="bg-layer" id="bg-stripes"></div>
+  <svg class="bg-star" style="left:6%;top:8%;width:26vmax;height:26vmax" viewBox="0 0 100 100">
+    <polygon points="50,0 60,35 98,35 68,57 78,94 50,72 22,94 32,57 2,35 40,35" fill="#000"/>
+  </svg>
+  <svg class="bg-star s2" style="right:4%;bottom:6%;width:34vmax;height:34vmax" viewBox="0 0 100 100">
+    <polygon points="50,0 60,35 98,35 68,57 78,94 50,72 22,94 32,57 2,35 40,35" fill="#fff"/>
+  </svg>
+  <!-- Per-screen video/artwork: each screen shows its own background -->
+  <video class="menu-art" id="art-home"
+          autoplay muted loop playsinline
+          onloadeddata="document.body.classList.add('has-art-home')">
+    <source src="assets/home-video.mp4" type="video/mp4">
+  </video>
+  <img class="menu-art" id="art-projects" src="assets/menus/projects.jpg" alt=""
+       onload="document.body.classList.add('has-art-projects')" onerror="this.remove()">
+ <video class="menu-art" id="art-skills"
+         autoplay muted loop playsinline
+         onloadeddata="document.body.classList.add('has-art-skills')">
+   <source src="assets/skills-video.mp4" type="video/mp4">
+ </video>
+  <img class="menu-art" id="art-about" src="assets/menus/about.jpg" alt=""
+       onload="document.body.classList.add('has-art-about')" onerror="this.remove()">
+
+  <!-- Contact background video -->
+  <video class="menu-art" id="art-contact"
+         autoplay muted loop playsinline
+         onloadeddata="document.body.classList.add('has-art-contact')">
+    <source src="assets/contact-video.mp4" type="video/mp4">
+  </video>
+
+  <div class="bg-layer" id="bg-halftone"></div>
+  <div class="bg-layer" id="bg-vignette"></div>
+  <!-- LCD aesthetic overlays -->
+  <div id="bg-tint"></div>
+  <div id="bg-scanlines"></div>
+  <div id="bg-vignette-lcd"></div>
+</div>
+<div id="slash" aria-hidden="true"></div>
+
+<!-- Hero art: drop your file at assets/hero.png (transparent PNG looks best) -->
+<img id="hero-art" src="assets/hero.png" alt="" onerror="this.remove()">
+
+<!-- Screen transition wipe -->
+<div id="wipe" aria-hidden="true">
+  <div class="pane p3"></div>
+  <div class="pane p2"></div>
+  <div class="pane p1"></div>
+  <div class="flash"></div>
+</div>
+
+<!-- Custom animated cursor + select sound -->
+<div id="cursor" aria-hidden="true"></div>
+<audio id="sfx-select" src="assets/sfx/select.mp3" preload="auto"></audio>
+<button id="audio-toggle" aria-label="Turn audio on">🔇</button>
+
+<!-- Background music (loops when enabled) -->
+<audio id="bg-music" src="assets/sfx/Color Your Night.mp3" preload="auto" loop></audio>
+
+<div id="shell">
+  <div id="hud-top">
+    <div class="hud-tag">Portfolio // Joney Sunga</div>
+    <div class="hud-tag alt">ANGELES CITY · COMPUTER SCIENCE</div>
+  </div>
+
+  <div id="stage">
+
+    <!-- HOME -->
+    <section class="screen active" id="screen-home" aria-label="Main menu">
+      <div id="intro-eyebrow">Take a look at my work</div>
+      <h1 id="big-name">
+        <span class="ransom" data-ransom="JONEY"></span>
+        <span class="ransom" data-ransom="SUNGA"></span>
+      </h1>
+      <p id="tagline">
+  4th-year Computer Science student at Angeles University Foundation,
+  Angeles City with a strong interest in Python, JavaScript, Machine Learning,
+  model handling, and software development. I enjoy building practical projects
+  that combine theory and code. I am passionate about learning by experimenting,
+  solving technical problems, and turning ideas into working applications.
+</p>
+      </p>
+      <nav id="menu" aria-label="Sections">
+        <button class="menu-item sel" data-target="projects">
+          <span class="ransom" data-ransom="PROJECTS"></span><span class="cursor-mark">◀</span>
+        </button>
+        <button class="menu-item" data-target="skills">
+          <span class="ransom" data-ransom="SKILLS"></span><span class="cursor-mark">◀</span>
+        </button>
+        <button class="menu-item" data-target="about">
+          <span class="ransom" data-ransom="ABOUT"></span><span class="cursor-mark">◀</span>
+        </button>
+        <button class="menu-item" data-target="contact">
+          <span class="ransom" data-ransom="CONTACT"></span><span class="cursor-mark">◀</span>
+        </button>
+      </nav>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="screen sub" id="screen-projects" aria-label="Projects">
+      <div class="screen-head"><span class="ransom" data-ransom="PROJECTS"></span></div>
+      <button class="back-hint" data-back>ESC · Back</button>
+      <div class="grid-label"><span class="bar"></span>Featured</div>
+      <div id="feat-grid" class="grid"></div>
+      <div class="grid-label"><span class="bar"></span>All repositories</div>
+      <div id="repo-status">Contacting GitHub…</div>
+      <div id="repo-grid" class="grid"></div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="screen sub" id="screen-skills" aria-label="Skills">
+      <div class="screen-head"><span class="ransom" data-ransom="SKILLS"></span></div>
+      <button class="back-hint" data-back>ESC · Back</button>
+      <div id="skills-body"></div>
+    </section>
+
+    <!-- ABOUT -->
+<section class="screen sub align-right" id="screen-about" aria-label="About">
+
+  <div class="screen-head">
+    <span class="ransom" data-ransom="ABOUT"></span>
+  </div>
+
+  <button class="back-hint" data-back>ESC · Back</button>
+
+  <div class="paper">
+
+    <!-- Profile photo -->
+    <figure class="about-photo">
+      <img src="assets/me.png" alt="Joney Sunga">
+      <figcaption>JONEY SUNGA</figcaption>
+    </figure>
+
+    <!-- INTRODUCTION -->
+    <p class="quote">
+      Hi, I'm Joney — a 4th-year Computer Science student at Angeles University Foundation with a deep fascination for machine learning and AI. 
+      Beyond just training models, I love understanding how they work under the hood, 
+      from building custom pipelines to deploying them in real-world applications that can genuinely help society. 
+      When I'm not experimenting with PyTorch or TensorFlow projects, you'll find me strategizing through challenging games, staying active through 
+      fitness, or enjoying a good cup of coffee. I've worked on everything from IT hardware to social media, but my passion has always been machine learning — 
+      especially deploying models that solve practical problems in agriculture, health, and beyond. <strong class="about-highlight">My goal is to become an ML expert who builds technology with purpose: 
+      not just cool demos, but systems that make a tangible difference in people's lives.</strong>  
+    </p>
+
+    <br>
+  
+</section>
+    <!-- CONTACT -->
+    <section class="screen sub align-right" id="screen-contact" aria-label="Contact">
+      <div class="screen-head"><span class="ransom" data-ransom="CONTACT"></span></div>
+      <button class="back-hint" data-back>ESC · Back</button>
+      <div class="paper" style="max-width:620px">
+        <p>I'm open to <strong>graduate ML and software engineering roles</strong> and research
+        collaborations in AI. Drop me a message below and it goes straight to my inbox,
+        or find me on any of these:</p>
+      </div>
+      <div class="contact-list">
+        <a class="contact-chip" href="mailto:sunga.joneyy@gmail.com"><span>Email ✉</span></a>
+        
+        <a class="contact-chip" href="https://github.com/unix-chewy" target="_blank" rel="noopener"><span>GitHub ↗</span></a>  
+      </div>
+
+      <!-- Message form — relayed to your inbox via formsubmit.co.
+           NOTE: the first-ever submission emails you a one-time activation link. -->
+      <form id="contact-form" class="paper" style="max-width:620px" novalidate>
+        <div class="form-head">Send me a message</div>
+        <label class="field">
+          <span>Name</span>
+          <input type="text" name="name" required maxlength="100" autocomplete="name">
+        </label>
+        <label class="field">
+          <span>Your email</span>
+          <input type="email" name="email" required maxlength="150" autocomplete="email">
+        </label>
+        <label class="field">
+          <span>Message</span>
+          <textarea name="message" required rows="5" maxlength="3000"></textarea>
+        </label>
+        <!-- honeypot: bots fill this, humans never see it -->
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off"
+               style="position:absolute;left:-5000px" aria-hidden="true">
+        <div class="form-foot">
+          <button type="submit" class="cv-btn form-send"><span>Send it ➤</span></button>
+          <div id="form-status" role="status"></div>
+        </div>
+      </form>
+    </section>
+
+  </div>
+
+  <div id="hud-bottom">
+    <span><span class="key">↑↓</span>Select</span>
+    <span><span class="key">Enter</span>Confirm</span>
+    <span><span class="key">Esc</span>Back</span>
+    <span style="margin-left:auto;opacity:.8" id="clock"></span>
+  </div>
+</div>
+
+<!-- MVC: model = data, view = DOM, controller = events -->
+<script src="js/model.js" defer></script>
+<script src="js/view.js" defer></script>
+<script src="js/controller.js" defer></script>
+
+<!-- Skills video is in #bg div with proper positioning -->
+</body>
+</html>
